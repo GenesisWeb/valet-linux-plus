@@ -18,7 +18,7 @@ class PhpFpm
     protected Nginx $nginx;
 
     public const SUPPORTED_PHP_VERSIONS = [
-        '8.2', '8.3',
+        '8.2', '8.3', '8.4',
     ];
 
     public const ISOLATION_SUPPORTED_PHP_VERSIONS = [
