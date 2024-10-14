@@ -46,7 +46,7 @@
         "illuminate/container": "^11.0",
         "mnapoli/silly": "^1.9",
         "symfony/process": "^7.0",
-        "nategood/httpful": "^0.3",
+        "nategood/httpful": "^1.0",
         "illuminate/collections": "^11.4",
         "uttamrabadiya/console-components": "^1.0.1"
     },
