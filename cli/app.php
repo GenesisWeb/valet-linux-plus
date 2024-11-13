@@ -50,7 +50,7 @@ Valet::migrateConfig();
 /**
  * Install valet required services
  */
-$app->command('install [--ignore-selinux]', function ($ignoreSELinux) {
+$app->command('install [--ignore-selinux] [--mariadb]', function ($ignoreSELinux, $mariadb) {
     Writer::info('Installing valet services');
 
     passthru(dirname(__FILE__) . '/scripts/update.sh'); // Clean up cruft
@@ -62,7 +62,7 @@ $app->command('install [--ignore-selinux]', function ($ignoreSELinux) {
     Mailpit::install();
     ValetRedis::install();
     Nginx::restart();
-    Mysql::install();
+    Mysql::install($mariadb);
     Ngrok::install();
     Valet::symlinkToUsersBin();
 
